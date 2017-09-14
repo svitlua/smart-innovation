@@ -1,111 +1,103 @@
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
 /*FONTS*/
 @font-face {
     font-family: yellowtail;
-    src: url("fonts/Yellowtail-Regular.ttf");
+    src: url("../fonts/Yellowtail-Regular.ttf");
 }
-
 @font-face {
     font-family: cambo;
-    src: url("fonts/Cambo-Regular.ttf");
+    src: url("../fonts/Cambo-Regular.ttf");
 }
-
 @font-face {
     font-family: openSans;
-    src: url("fonts/OpenSans-Regular.ttf");
+    src: url("../fonts/OpenSans-Regular.ttf");
 }
 
-/*font-family: 'Yellowtail', cursive;
-font-family: 'Cambo', serif;
-font-family: 'Open Sans', sans-serif;
-*/
 header{
 	display: flex;
 	flex-direction: row;
-	align-content: space-around;
+	justify-content: space-between;
 	background-color: #1c1c1c;
+	padding-right: 8rem;
+	padding-left: 8rem;
+	padding-bottom: 2rem;
 }
 .logo{
 	display: flex;
 	flex-direction: column;
 	text-align: left;
-	padding-top: 3rem;
-	padding-left: 8rem;
-
+	padding-top: 2rem;
 }
 #logo-title{
 	font-family: cambo;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	color: white;
 	text-shadow: 1px 1px #000000;
-
+	line-height: 1.5rem;
+	margin-bottom: 0.5rem;
 }
 #logo-slogan{
 	font-family: "Arial";
 	font-size: 0.75rem;
+	opacity: 0.3;
 	color: #ebebeb;
+	margin: 0rem;
 }
-
 .search{
 	padding-top: 2rem;
-	padding-right: 8rem;
 }
 input[type="text"]{
 	background-color: #1c1c1c;
     color: white;
+    font-family: "Arial";
+	font-size: .8rem;
+	opacity: 0.3;
+
+}
+input[type="submit"]{
+	background-color: #3e3e3e;
+	font-family: "Arial";
+	font-size: .8rem;
+    color: white;
+    border-radius: 1rem;
+    border: none;
+    padding: .4rem .7rem;
 }
 .banner {
-	background: url("banner.png") no-repeat;
+	background: url("../images/banner.png") no-repeat;
 	background-color: #000f30;
-	height: 20rem;
-/*	display: flex;
-	flex-direction: column;*/
+	height: 30rem;
 }
 #banner-only{
+	position: absolute;
 	color: white;
 	font-family: cambo;
-	font-size: 2rem;
-	padding: 1rem 1rem;
-	background-color: black;
-	margin-left: 40rem;
-	margin-top: 5rem;
-	
+	font-size: 2.5rem;
+	padding: 1rem 2rem;
+	background: rgba(0, 0, 0, 0.8);
+	margin-left: 34rem;
+	margin-top: 8rem;
 }
-
 #banner-support{
+	position: absolute;
 	color: white;
 	font-family: cambo;
-	font-size: 2rem;
+	font-size: 1.7rem;
 	padding: 1rem 1rem;
-	background-color: #000f30;
-	margin-left: 45rem;
-	margin-top: 25rem;
-
+	background: rgba(4, 32, 62, 0.8);
+	margin-left: 36rem;
+	margin-top: 12.8rem;
 }
-
 main{
 	background-color: #cdcdcd;
 	display: flex;
 	flex-direction: column;
 }
-
 .article-container{
 	display: flex;
 	flex-direction: wrap;
 	margin-left: 8rem;
 	margin-right: 8rem;
+	margin-top: -8rem;
 }
 article{
 	display: flex;
@@ -114,14 +106,22 @@ article{
 	background-color: #f4f4f4;
 	border-top-right-radius: 2rem; 
 	border-bottom-left-radius: 2rem;
-	margin-top: -5rem;
 	margin-right: .2rem;
 	margin-left: .2rem;
 	padding: 1rem 1rem;
 }
-
-article:hover{
-
+article:hover .title{
+	color: white;
+}
+article:hover .subtitle{
+	color: white;
+}
+article:hover {
+	background-color: #303030;
+}
+article:hover .more-btn{
+	color: black;
+	background-color: #dfdfdf;
 }
 .title{
 	font-family: "Tahoma";
@@ -129,7 +129,6 @@ article:hover{
 	font-weight: bold;
 	margin-top: 1rem;
 	margin-bottom: 0rem;
-	
 }
 .subtitle {
 	font-family: yellowtail;
@@ -150,12 +149,12 @@ article:hover{
 	margin-top: 0rem;
 	text-align: center;
 }
-
 .more-btn{
 	color: white;
 	background-color: #5394b8;
 	border-radius: 1rem;
 	padding: .2rem 1rem;
+	border: none;
 }
 .gray-box{
 	display: flex;
@@ -169,14 +168,13 @@ article:hover{
 	font-family: openSans;
 	font-size: 1.3rem;
 	color: white;
-	text-shadow: 1px 1px 3px #000000;
-	text-align: center;
+	text-align: left;
+	padding-left: 15rem;
 }
 .btn-container{
-	margin: 0rem 8rem 1rem;
+	margin: 0rem 8rem 2rem;
 }
 footer{
 	background-color: #2d2d2d;
 	height: 5rem;
 }
-
